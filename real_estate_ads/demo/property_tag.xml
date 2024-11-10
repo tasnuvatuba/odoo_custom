@@ -1,0 +1,11 @@
+<!--demo data will not appear if is not checked at the db creation time-->
+<odoo>
+    <data noupdate="1">
+        <record id="property_tag_cozy" model="estate.property.tag">
+            <field name="name">Cozy</field>
+        </record>
+        <record id="property_type_renovated" model="estate.property.tag">
+            <field name="name">Renovated</field>
+        </record>
+    </data>
+</odoo>

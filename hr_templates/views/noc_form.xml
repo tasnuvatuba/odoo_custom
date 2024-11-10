@@ -1,0 +1,49 @@
+<odoo>
+    <record id="view_employee_noc_form" model="ir.ui.view">
+        <field name="name">employee.noc.form</field>
+        <field name="model">employee.noc</field>
+        <field name="arch" type="xml">
+            <form string="NOC">
+                <sheet>
+                    <group>
+                        <field name="reference_number" readonly="1"/>
+                        <field name="date" />
+                        <field name="employee_id" />
+                        <field name="name" readonly="1"/>
+                        <field name="passport_no" readonly="1"/>
+                        <field name="father_name" />
+                        <field name="date_joined" readonly="1"/>
+                        <field name="job_position" readonly="1"/>
+                        <field name="country" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_noc_template_tree" model="ir.ui.view">
+    <field name="name">noc.template.tree</field>
+    <field name="model">employee.noc</field>
+    <field name="arch" type="xml">
+        <tree string="NOC Templates">
+            <field name="reference_number"/>
+            <field name="date"/>
+            <field name="employee_id"/>
+            <field name="name"/>
+            <field name="country"/>
+            <field name="hr_name"/>
+        </tree>
+    </field>
+</record>
+
+
+
+    <!-- NOC Template Action -->
+    <record id="action_noc_template" model="ir.actions.act_window">
+        <field name="name">NOC Template</field>
+        <field name="res_model">employee.noc</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_noc_template_tree"/>
+    </record>
+
+</odoo>

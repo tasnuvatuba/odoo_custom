@@ -1,0 +1,15 @@
+<odoo>
+    <!-- Templates Menu under Employee Module -->
+    <menuitem id="menu_templates_root"
+              name="Templates"
+              parent="hr.menu_hr_root"
+              sequence="10"/>
+
+    <!-- NOC Template Submenu under Templates -->
+    <menuitem id="menu_noc_template"
+              name="NOC Template"
+              parent="menu_templates_root"
+              action="action_noc_template"
+              sequence="10"/>
+
+</odoo>

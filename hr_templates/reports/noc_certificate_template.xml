@@ -1,0 +1,51 @@
+<odoo>
+    <template id="report_noc_certificate">
+        <t t-call="web.basic_layout">
+            <link rel="stylesheet" type="text/css" href="/hr_templates/static/src/css/bg.css"/>
+
+            <div class="page custom-bg">
+                <!-- Report content overlay -->
+                <div style="position: relative; padding: 20px;">
+                    <div style="text-align: right; margin-top: 20px;">
+                        <p>Reference: DSi/HR/<span t-esc="docs.reference_number"/></p>
+                        <p>Date: <span t-esc="docs.date"/></p>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 40px;">
+                        <h3>TO WHOM IT MAY CONCERN</h3>
+                    </div>
+
+                    <div style="margin-top: 20px;">
+                        <p><strong>Subject:</strong> No Objection Letter for <span t-esc="docs.name"/>.</p>
+
+                        <p>This is to certify that <span t-esc="docs.name"/>, (Passport no: <span t-esc="docs.passport_no"/>),
+                        son of <span t-esc="docs.father_name"/>, has been employed with Dynamic Solution Innovators Ltd. (DSi)
+                        since <span t-esc="docs.date_joined"/>. He currently holds the position of <span t-esc="docs.job_position"/>.</p>
+
+                        <p>He is going to <span t-esc="docs.country"/> and this letter is being issued as a No Objection Certificate.</p>
+
+                        <p>Dynamic Solution Innovators Ltd. (DSi) has no objection to his obtaining a visa to <span t-esc="docs.country"/>
+                        for visit. If you need further assistance or information, please feel free to contact us.</p>
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <p>Sincerely,</p>
+                        <p><span t-esc="docs.hr_name"/></p>
+                        <p>Executive-HR</p>
+                        <p>Email: <span t-esc="docs.email"/></p>
+                        <p>Phone: <span t-esc="docs.phone"/></p>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <report
+        id="action_report_noc_certificate"
+        model="employee.noc"
+        string="NOC Certificate"
+        report_type="qweb-pdf"
+        name="hr_templates.report_noc_certificate"
+        file="hr_templates.report_noc_certificate"
+    />
+</odoo>

@@ -1,0 +1,42 @@
+<odoo>
+    <record id="view_training_session_tree" model="ir.ui.view">
+        <field name="name">training.session.tree</field>
+        <field name="model">training.session</field>
+        <field name="arch" type="xml">
+            <tree string="Training Sessions">
+                <field name="name"/>
+                <field name="topic"/>
+                <field name="trainer"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_training_session_form" model="ir.ui.view">
+        <field name="name">training.session.form</field>
+        <field name="model">training.session</field>
+        <field name="arch" type="xml">
+            <form string="Training Session">
+                <sheet>
+                    <group>
+                        <field name="name" required="1"/>
+                        <field name="topic" required="1"/>
+                        <field name="trainer" required="1"/>
+                        <field name="start_date" required="1"/>
+                        <field name="end_date" required="1"/>
+                        <field name="status" required="1"/>
+                        <field name="participants"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_training_session" model="ir.actions.act_window">
+        <field name="name">Training Sessions</field>
+        <field name="res_model">training.session</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,9 @@
+<odoo>
+    <!-- Main Menu for Training -->
+    <menuitem id="menu_training_root" name="Training Management" sequence="1"/>
+
+    <!-- Submenu for Training Sessions -->
+    <menuitem id="menu_training_session" name="Training Sessions"
+              parent="menu_training_root" action="action_training_session" sequence="10"/>
+
+</odoo>
